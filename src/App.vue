@@ -8,8 +8,6 @@ export default {
   name: 'App',
   beforeCreate () {
     // TODO: remote this shit from here
-    // TODO: or not?
-    // TODO: or why?
     // this.$log('beforeCreate', process.env)
     let SERVER_URL = process.env.SERVER_URL || process.env.APP_URL
     // this.$log('SERVER_URL', SERVER_URL)

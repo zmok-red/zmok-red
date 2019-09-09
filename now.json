@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "zmok-red",
+  "builds": [
+    { "src": "public/**", "use": "@now/static" },
+    { "src": "index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/*", "methods": ["GET"], "dest": "public/index.html" },
+    { "src": "/app", "methods": ["GET"], "dest": "public/index.html"},
+    { "src": "/app/(.*)", "methods": ["GET"], "dest": "public/index.html"},
+    { "src": "/graphql", "methods": ["GET", "POST"], "dest": "index.js"},
+    { "src": "/(.+)", "dest": "public/$1" }
+  ]
+}

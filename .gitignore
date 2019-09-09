@@ -11,6 +11,6 @@ npm-debug.log*
 .quasar
 .env
 /node_modules
-/public/*
-/config-template/*
-/blocks-template/*
+/public
+/config-template
+/blocks-template

@@ -10,7 +10,7 @@ export default async ({ Vue, app, router }) => {
   // auth
   router.beforeEach((to, from, next) => {
     debug('beforeEach', to.path)
-    if (to.path === '/login') {
+    if (to.path === '/app/login') {
       next()
     } else {
       debug('AUTH route...')
@@ -18,13 +18,13 @@ export default async ({ Vue, app, router }) => {
       // let url = localStorage.getItem('zurl')
       let exp = localStorage.getItem('zexp')
       if (!token || !exp) {
-        next('/login')
+        next('/app/login')
       } else {
         debug('token', token)
         debug('exp', exp)
         let now = Date.now()
         if (now > parseInt(exp)) {
-          next('/login')
+          next('/app/login')
         } else {
           next()
         }

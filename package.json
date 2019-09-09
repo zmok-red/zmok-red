@@ -13,7 +13,7 @@
     "server": "nodemon index.js",
     "dev": "quasar dev -m spa",
     "dev_pwa": "quasar dev -m pwa",
-    "build": "quasar build -m spa",
+    "build": "quasar build -m pwa",
     "build_pwa": "quasar build -m pwa",
     "heroku-postbuild": "npm install && npm run build_pwa"
   },

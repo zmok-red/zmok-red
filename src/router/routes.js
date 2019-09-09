@@ -1,6 +1,6 @@
 
 const routes = [
-  { path: '/login', component: () => import('layouts/layout_login.vue') },
+  { path: '/app/login', component: () => import('layouts/layout_login.vue') },
   { path: '/', redirect: '/app' },
   {
     path: '/app',
